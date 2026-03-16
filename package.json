@@ -6,6 +6,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
+    "client:dev": "ts-node src/client.ts",
+    "client:run": "node dist/client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
