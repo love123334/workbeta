@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  temporal:
+    image: temporalio/auto-setup:latest
+    container_name: temporal
+    environment:
+      - TEMPORAL_UI_ENABLE=true
+    ports:
+      - "7233:7233" # Temporal frontend
+      - "8233:8233" # Temporal Web UI
+    # For local development only
+    healthcheck:
+      test: ["CMD", "tctl", "--address", "temporal:7233", "workflow", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
