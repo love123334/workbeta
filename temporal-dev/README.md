@@ -18,7 +18,7 @@ docker compose up -d
 This will:
 
 - Start the Temporal server on `localhost:7233`.
-- Expose the Temporal Web UI on `http://localhost:8233`.
+- Expose the Temporal Web UI on `http://localhost:8234`.
 
 You can check the status of containers:
 
@@ -45,6 +45,6 @@ This stops and removes the containers (data is ephemeral by default).
 ### How this meets the acceptance criteria
 
 - **Temporal dev server runs locally**: `docker compose up -d` starts Temporal on your machine.
-- **Temporal UI is accessible**: open `http://localhost:8233` in a browser while the containers are running.
+- **Temporal UI is accessible**: open `http://localhost:8234` in a browser while the containers are running.
 - **Instructions to start the server documented**: all start/stop commands are documented above in this `README.md`.
 
